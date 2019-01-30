@@ -204,7 +204,7 @@
                     <message>Maven artifacts for ${project.name} (${project.groupId}.${project.artifactId}-${project.version})
                     </message>
                     <noJekyll>true</noJekyll>
-                    <outputDirectory>${project.build.directory}/${emotion.editor.gwt.repository.name}</outputDirectory>
+                    <outputDirectory>${project.build.directory}/${emotion.editor.repository.name}</outputDirectory>
                     <branch>refs/heads/${project.artifactId}-${project.version}</branch>
                     <includes>
                         <include>**/*</include>
