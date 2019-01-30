@@ -4,7 +4,7 @@
     <inherits name="pt.up.fc.dcc.mediumeditor.MediumEditorGWT"/>
 
     <!-- Specify the app entry point class -->
-    <entry-point class='pt.up.hs.emotioneditor.EmotionEditorTest'/><!---->
+    <!--<entry-point class='pt.up.hs.emotioneditor.EmotionEditorTest'/>-->
 
     <source path=""/>
 
