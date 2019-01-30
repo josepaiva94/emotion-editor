@@ -6,16 +6,16 @@ for highlighting emotions in text.
 # Basic usage
 
 ```xml
-    <repositories>
-        <repository>
-            <id>emotioneditor</id>
-            <url>https://raw.github.com/josepaiva94/emotion-editor/emotion-editor-0.0.1</url>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </repository>
-    </repositories>
+<repositories>
+    <repository>
+        <id>emotioneditor</id>
+        <url>https://raw.github.com/josepaiva94/emotion-editor/emotion-editor-0.0.1</url>
+        <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+        </snapshots>
+    </repository>
+</repositories>
 ```
 
 ### Demo
