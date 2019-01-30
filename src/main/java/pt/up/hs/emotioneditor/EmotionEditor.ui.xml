@@ -1,0 +1,10 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+    <ui:with field="res" type="pt.up.hs.emotioneditor.resources.Resources"/>
+
+    <g:HTMLPanel ui:field="editorContainer" addStyleNames="{res.style.editableContainer}">
+
+    </g:HTMLPanel>
+
+</ui:UiBinder>

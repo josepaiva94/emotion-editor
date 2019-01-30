@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <inherits name="com.google.gwt.user.User"/>
+    <inherits name="pt.up.fc.dcc.mediumeditor.MediumEditorGWT"/>
+
+    <!-- Specify the app entry point class -->
+    <entry-point class='pt.up.hs.emotioneditor.EmotionEditorTest'/><!---->
+
+    <source path=""/>
+
+    <!-- Only support recent browsers -->
+    <set-property name="user.agent" value="ie10,gecko1_8,safari"/>
+
+    <!-- GSS is good, use it -->
+    <set-configuration-property name="CssResource.enableGss" value="true" />
+</module>
