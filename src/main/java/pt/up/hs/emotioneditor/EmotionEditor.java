@@ -4,6 +4,9 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.dom.client.Element;
+import com.google.gwt.event.logical.shared.HasValueChangeHandlers;
+import com.google.gwt.event.logical.shared.ValueChangeHandler;
+import com.google.gwt.event.shared.HandlerRegistration;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Composite;
@@ -27,7 +30,7 @@ import java.util.stream.Collectors;
  *
  * @author José Carlos Paiva <code>josepaiva94@gmail.com</code>
  */
-public class EmotionEditor extends Composite {
+public class EmotionEditor extends Composite implements HasValueChangeHandlers<String> {
 
     interface EmotionEditorUiBinder extends UiBinder<HTMLPanel, EmotionEditor> {
     }
@@ -89,6 +92,19 @@ public class EmotionEditor extends Composite {
         editor.setHTML(html);
     }
 
+    @Override
+    public HandlerRegistration addValueChangeHandler(ValueChangeHandler<String> handler) {
+        return editor.addValueChangeHandler(handler);
+    }
+
+    public int countCharacters() {
+        return editor.countCharacters();
+    }
+
+    public int countWords() {
+        return editor.countWords();
+    }
+
     public void highlight(List<EmotionHighlight> emotionHighlights) {
 
         String text = editor.getText();
@@ -96,7 +112,8 @@ public class EmotionEditor extends Composite {
         List<List<String>> htmlChars = Arrays.stream(text.split("\n"))
                 .map(ln -> ln.chars()
                         .mapToObj(c -> String.valueOf((char) c))
-                        .collect(Collectors.toList())).collect(Collectors.toList());
+                        .collect(Collectors.toList()))
+                .collect(Collectors.toList());
 
         for (EmotionHighlight emotionHighlight : emotionHighlights) {
 
@@ -149,11 +166,13 @@ public class EmotionEditor extends Composite {
             startTag.append('>');
 
             int startIndex = emotionHighlight.getStart(),
-                    endIndex = startIndex + emotionHighlight.getSize() - 1;
-            htmlChars.get(emotionHighlight.getLine())
-                    .set(startIndex, startTag.toString() + htmlChars.get(emotionHighlight.getLine()).get(startIndex));
-            htmlChars.get(emotionHighlight.getLine())
-                    .set(endIndex, htmlChars.get(emotionHighlight.getLine()).get(endIndex) + "</mark>");
+                endIndex = startIndex + emotionHighlight.getSize() - 1,
+                actualLine = emotionHighlight.getLine();
+
+            htmlChars.get(actualLine)
+                    .set(startIndex, startTag.toString() + htmlChars.get(actualLine).get(startIndex));
+            htmlChars.get(actualLine)
+                    .set(endIndex, htmlChars.get(actualLine).get(endIndex) + "</mark>");
         }
 
         List<String> lines = htmlChars.stream()
@@ -165,12 +184,7 @@ public class EmotionEditor extends Composite {
 
     public List<EmotionHighlight> highlights() {
 
-        return getHighlights().getAsList()
-                /*.stream()
-                .map(h -> new TextEmotion(
-                        h.getLine(), h.getStart(), h.getSize(),
-                        h.getGlobalEmotion(), h.getIntermediateEmotion(), h.getSpecificEmotion()))
-                .collect(Collectors.toList())*/;
+        return getHighlights().getAsList();
     }
 
     private native String getEmotionLabel(String emotion, String[] parents) /*-{
@@ -213,6 +227,16 @@ public class EmotionEditor extends Composite {
 
         var highlights = [];
 
+        var prevSiblings = function (target, tag) {
+            var siblings = [], n = target;
+            while(n = n.previousElementSibling) {
+                if (n.tagName.toLowerCase() === tag)
+                    siblings.push(n);
+            }
+            return siblings;
+        };
+
+        var line = 0;
         var ps = editor.querySelectorAll('p');
         for (var i = 0; i < ps.length; i++) {
 
@@ -221,13 +245,15 @@ public class EmotionEditor extends Composite {
             var offset = 0;
             for (var j = 0; j < marks.length; j++) {
 
-                var index = pHTML.indexOf(marks[j].outerHTML);
+                var brs = prevSiblings(marks[j], "br").length;
+
+                var index = pHTML.indexOf(marks[j].outerHTML) - brs * 4;
                 var global = marks[j].getAttribute('data-global');
                 var intermediate = marks[j].getAttribute('data-intermediate');
                 var specific = marks[j].getAttribute('data-specific');
 
                 highlights.push({
-                    line: i,
+                    line: line + brs,
                     start: offset + index,
                     size: marks[j].innerHTML.length,
                     globalEmotion: global,
@@ -238,8 +264,10 @@ public class EmotionEditor extends Composite {
                 pHTML = pHTML.slice(index + marks[j].outerHTML.length);
                 offset += index + marks[j].innerHTML.length;
             }
-        }
 
+            line += ps[i].querySelectorAll('br').length + 2;
+        }
+        
         return highlights;
     }-*/;
 }
