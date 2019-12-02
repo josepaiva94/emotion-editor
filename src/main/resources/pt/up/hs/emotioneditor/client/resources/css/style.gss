@@ -1,0 +1,306 @@
+@external editable, flat-button, medium-toolbar-arrow-under, medium-toolbar-arrow-over, medium-editor-toolbar, medium-editor-button-active, medium-editor-button-last, medium-editor-toolbar-form, medium-editor-toolbar-input, medium-editor-toolbar-anchor-preview, medium-editor-toolbar-emotion-preview, medium-editor-placeholder;
+
+.editable-container {
+
+}
+
+.medium-toolbar-arrow-under:after {
+    top: 60px;
+    border-color: #6aa84f transparent transparent transparent;
+}
+
+.medium-toolbar-arrow-over:before {
+    top: -8px;
+    border-color: transparent transparent #6aa84f transparent;
+}
+
+.medium-editor-toolbar {
+    background-color: #6aa84f;
+}
+
+.medium-editor-toolbar li {
+    padding: 0;
+}
+
+.medium-editor-toolbar li button {
+    min-width: 60px;
+    height: 60px;
+    border: none;
+    border-right: 1px solid #9ccea6;
+    background-color: transparent;
+    color: #fff;
+    transition: background-color .2s ease-in, color .2s ease-in;
+}
+
+.medium-editor-toolbar li button:hover {
+    background-color: #346a3f;
+    color: #fff;
+}
+
+.medium-editor-toolbar li .medium-editor-button-active {
+    background-color: #23482a;
+    color: #fff;
+}
+
+.medium-editor-toolbar li .medium-editor-button-last {
+    border-right: none;
+}
+
+.medium-editor-toolbar-form .medium-editor-toolbar-input {
+    height: 60px;
+    background: #6aa84f;
+    color: #fff;
+}
+
+.medium-editor-toolbar-form .medium-editor-toolbar-input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.medium-editor-toolbar-form .medium-editor-toolbar-input:-moz-placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.medium-editor-toolbar-form .medium-editor-toolbar-input::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.medium-editor-toolbar-form .medium-editor-toolbar-input:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.medium-editor-toolbar-form a {
+    color: #fff;
+}
+
+.medium-editor-toolbar-anchor-preview,
+.medium-editor-toolbar-emotion-preview {
+    background: #6aa84f;
+    color: #fff;
+}
+
+.medium-editor-placeholder:after {
+    color: #9ccea6;
+}
+
+.editable {
+    word-wrap: break-word;
+    min-height: 30px;
+
+    outline: none;
+    margin: 0 0 20px 0;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.editable mark[data-global="BENEVOLENCE"][data-intermediate="AFFECTION"][data-specific="LOVE"] {
+    background-color: #3fff33;
+}
+
+.editable mark[data-global="BENEVOLENCE"][data-intermediate="AFFECTION"][data-specific="DESIRE"] {
+    background-color: #47ef3d;
+}
+
+.editable mark[data-global="BENEVOLENCE"][data-intermediate="AFFECTION"][data-specific="ADMIRATION"] {
+    background-color: #4fdf46;
+}
+
+.editable mark[data-global="BENEVOLENCE"][data-intermediate="AFFECTION"][data-specific="ATTRACTION"] {
+    background-color: #57cf50;
+}
+
+.editable mark[data-global="BENEVOLENCE"][data-intermediate="KINDNESS"][data-specific="GOODNESS"] {
+    background-color: #5fbf59;
+}
+
+.editable mark[data-global="BENEVOLENCE"][data-intermediate="KINDNESS"][data-specific="SWEETNESS"] {
+    background-color: #67af63;
+}
+
+.editable mark[data-global="BENEVOLENCE"][data-intermediate="KINDNESS"][data-specific="PATIENCE"] {
+    background-color: #6f9f6c;
+}
+
+.editable mark[data-global="BENEVOLENCE"][data-intermediate="KINDNESS"][data-specific="HUMILITY"] {
+    background-color: #778f76;
+}
+
+.editable mark[data-global="MALEVOLENCE"][data-intermediate="HATE"][data-specific="RESENTMENT"] {
+    background-color: #8f7676;
+}
+
+.editable mark[data-global="MALEVOLENCE"][data-intermediate="HATE"][data-specific="DISGUST"] {
+    background-color: #9f6c6c;
+}
+
+.editable mark[data-global="MALEVOLENCE"][data-intermediate="HATE"][data-specific="CONTEMPT"] {
+    background-color: #af6363;
+}
+
+.editable mark[data-global="MALEVOLENCE"][data-intermediate="HATE"][data-specific="IRRITATION"] {
+    background-color: #bf5959;
+}
+
+.editable mark[data-global="MALEVOLENCE"][data-intermediate="AGGRESSIVENESS"][data-specific="ARROGANCE"] {
+    background-color: #cf5050;
+}
+
+.editable mark[data-global="MALEVOLENCE"][data-intermediate="AGGRESSIVENESS"][data-specific="RAGE"] {
+    background-color: #df4646;
+}
+
+.editable mark[data-global="MALEVOLENCE"][data-intermediate="AGGRESSIVENESS"][data-specific="IRE"] {
+    background-color: #ef3d3d;
+}
+
+.editable mark[data-global="MALEVOLENCE"][data-intermediate="AGGRESSIVENESS"][data-specific="CRUELTY"] {
+    background-color: #ff3333;
+}
+
+.editable mark[data-global="COMFORT"][data-intermediate="HAPPINESS"][data-specific="HAPPY"] {
+    background-color: #33a2ff;
+}
+
+.editable mark[data-global="COMFORT"][data-intermediate="HAPPINESS"][data-specific="PLEASURE"] {
+    background-color: #3d9eef;
+}
+
+.editable mark[data-global="COMFORT"][data-intermediate="HAPPINESS"][data-specific="LAUGH"] {
+    background-color: #4699df;
+}
+
+.editable mark[data-global="COMFORT"][data-intermediate="LUCIDITY"][data-specific="MENTAL_HEALTH"] {
+    background-color: #33f3ff;
+}
+
+.editable mark[data-global="COMFORT"][data-intermediate="LUCIDITY"][data-specific="BALANCE"] {
+    background-color: #46d6df;
+}
+
+.editable mark[data-global="COMFORT"][data-intermediate="ENTHUSIASM"][data-specific="JOY"] {
+    background-color: #33e9ff;
+}
+
+.editable mark[data-global="COMFORT"][data-intermediate="ENTHUSIASM"][data-specific="VIVACITY"] {
+    background-color: #46cfdf;
+}
+
+.editable mark[data-global="COMFORT"][data-intermediate="ENTHUSIASM"][data-specific="ALERT"] {
+    background-color: #50c1cf;
+}
+
+.editable mark[data-global="COMFORT"][data-intermediate="RELIEF"][data-specific="APPEASE"] {
+    background-color: #63abaf;
+}
+
+.editable mark[data-global="COMFORT"][data-intermediate="RELIEF"][data-specific="FREEDOM"] {
+    background-color: #6c9c9f;
+}
+
+.editable mark[data-global="COMFORT"][data-intermediate="SATISFACTION"][data-specific="ESTEEM"] {
+    background-color: #5991BF;
+}
+
+.editable mark[data-global="COMFORT"][data-intermediate="SATISFACTION"][data-specific="LIKE"] {
+    background-color: #638CAF;
+}
+
+.editable mark[data-global="COMFORT"][data-intermediate="SATISFACTION"][data-specific="SATIETY"] {
+    background-color: #6C889F;
+}
+
+.editable mark[data-global="DISCOMFORT"][data-intermediate="SUFFERING"][data-specific="DRAMA"] {
+    background-color: #FF8333;
+}
+
+.editable mark[data-global="DISCOMFORT"][data-intermediate="SUFFERING"][data-specific="PAIN"] {
+    background-color: #EF833D;
+}
+
+.editable mark[data-global="DISCOMFORT"][data-intermediate="SUFFERING"][data-specific="CRY"] {
+    background-color: #DF8246;
+}
+
+.editable mark[data-global="DISCOMFORT"][data-intermediate="MADNESS"][data-specific="MENTAL_DISEASE"] {
+    background-color: #FF7F33;
+}
+
+.editable mark[data-global="DISCOMFORT"][data-intermediate="MADNESS"][data-specific="IMBALANCE"] {
+    background-color: #DF6F2D;
+}
+
+.editable mark[data-global="DISCOMFORT"][data-intermediate="DEPRESSION"][data-specific="SADNESS"] {
+    background-color: #9F5220;
+}
+
+.editable mark[data-global="DISCOMFORT"][data-intermediate="DEPRESSION"][data-specific="FATIGUE"] {
+    background-color: #80421A;
+}
+
+.editable mark[data-global="DISCOMFORT"][data-intermediate="DEPRESSION"][data-specific="APATHY"] {
+    background-color: #603113;
+}
+
+.editable mark[data-global="DISCOMFORT"][data-intermediate="DISTURBANCE"][data-specific="AGITATION"] {
+    background-color: #DF8C46;
+}
+
+.editable mark[data-global="DISCOMFORT"][data-intermediate="DISTURBANCE"][data-specific="REMORSE"] {
+    background-color: #CF8A50;
+}
+
+.editable mark[data-global="DISCOMFORT"][data-intermediate="DISSATISFACTION"][data-specific="HUMILIATION"] {
+    background-color: #BF8859;
+}
+
+.editable mark[data-global="DISCOMFORT"][data-intermediate="DISSATISFACTION"][data-specific="DISLIKE"] {
+    background-color: #AF8663;
+}
+
+.editable mark[data-global="DISCOMFORT"][data-intermediate="DISSATISFACTION"][data-specific="FRUSTRATION"] {
+    background-color: #9F846C;
+}
+
+.editable mark[data-global="SAFETY"][data-intermediate="COURAGE"][data-specific="AUDACITY"] {
+    background-color: #33FFA9;
+}
+
+.editable mark[data-global="SAFETY"][data-intermediate="COURAGE"][data-specific="EXTROVERSION"] {
+    background-color: #3DEFA4;
+}
+
+.editable mark[data-global="SAFETY"][data-intermediate="CALM"][data-specific="TRANQUILITY"] {
+    background-color: #59BF94;
+}
+
+.editable mark[data-global="SAFETY"][data-intermediate="CALM"][data-specific="RELAXATION"] {
+    background-color: #63AF8F;
+}
+
+.editable mark[data-global="ANXIETY"][data-intermediate="FEAR"][data-specific="DREAD"] {
+    background-color: #BC5757;
+}
+
+.editable mark[data-global="ANXIETY"][data-intermediate="FEAR"][data-specific="INTROVERSION"] {
+    background-color: #A14A4A;
+}
+
+.editable mark[data-global="ANXIETY"][data-intermediate="TENSION"][data-specific="ANGUISH"] {
+    background-color: #D76363;
+}
+
+.editable mark[data-global="ANXIETY"][data-intermediate="TENSION"][data-specific="CONCERN"] {
+    background-color: #DC7777;
+}
+
+.editable mark[data-global="SURPRISE"] {
+    background-color: #FFF033;
+}
+
+.editable mark[data-global="INDIFFERENCE"] {
+    background-color: #B8B8B8;
+}
+
+.editable mark[data-global="NON_SPECIFIC"] {
+    background-color: #E3E3E3;
+}
+

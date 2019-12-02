@@ -5,207 +5,207 @@
     "specific"
   ],
   "emotions": {
-    "benevolence": {
+    "BENEVOLENCE": {
       "emotions": {
-        "affection": {
+        "AFFECTION": {
           "emotions": {
-            "love": {
+            "LOVE": {
             },
-            "desire": {
+            "DESIRE": {
             },
-            "admiration": {
+            "ADMIRATION": {
             },
-            "attraction": {
+            "ATTRACTION": {
             }
           }
         },
-        "kindness": {
+        "KINDNESS": {
           "emotions": {
-            "goodness": {
+            "GOODNESS": {
             },
-            "sweetness": {
+            "SWEETNESS": {
             },
-            "patience": {
+            "PATIENCE": {
             },
-            "humility": {
+            "HUMILITY": {
             }
           }
         }
       }
     },
-    "malevolence": {
+    "MALEVOLENCE": {
       "emotions": {
-        "hate": {
+        "HATE": {
           "emotions": {
-            "resentment": {
+            "RESENTMENT": {
             },
-            "disgust": {
+            "DISGUST": {
             },
-            "contempt": {
+            "CONTEMPT": {
             },
-            "irritation": {
+            "IRRITATION": {
             }
           }
         },
-        "aggressiveness": {
+        "AGGRESSIVENESS": {
           "emotions": {
-            "cruelty": {
+            "CRUELTY": {
             },
-            "rage": {
+            "RAGE": {
             },
-            "ire": {
+            "IRE": {
             },
-            "arrogance": {
+            "ARROGANCE": {
             }
           }
         }
       }
     },
-    "comfort": {
+    "COMFORT": {
       "emotions": {
-        "happiness": {
+        "HAPPINESS": {
           "emotions": {
-            "happy": {
+            "HAPPY": {
             },
-            "pleasure": {
+            "PLEASURE": {
             },
-            "laugh": {
+            "LAUGH": {
             }
           }
         },
-        "lucidity": {
+        "LUCIDITY": {
           "emotions": {
-            "mental_health": {
+            "MENTAL_HEALTH": {
             },
-            "balance": {
+            "BALANCE": {
             }
           }
         },
-        "enthusiasm": {
+        "ENTHUSIASM": {
           "emotions": {
-            "joy": {
+            "JOY": {
             },
-            "vivacity": {
+            "VIVACITY": {
             },
-            "alert": {
+            "ALERT": {
             }
           }
         },
-        "relief": {
+        "RELIEF": {
           "emotions": {
-            "appease": {
+            "APPEASE": {
             },
-            "freedom": {
+            "FREEDOM": {
             }
           }
         },
-        "satisfaction": {
+        "SATISFACTION": {
           "emotions": {
-            "esteem": {
+            "ESTEEM": {
             },
-            "satiety": {
+            "SATIETY": {
             },
-            "like": {
+            "LIKE": {
             }
           }
         }
       }
     },
-    "discomfort": {
+    "DISCOMFORT": {
       "emotions": {
-        "suffering": {
+        "SUFFERING": {
           "emotions": {
-            "drama": {
+            "DRAMA": {
             },
-            "pain": {
+            "PAIN": {
             },
-            "cry": {
+            "CRY": {
             }
           }
         },
-        "madness": {
+        "MADNESS": {
           "emotions": {
-            "mental_disease": {
+            "MENTAL_DISEASE": {
             },
-            "imbalance": {
+            "IMBALANCE": {
             }
           }
         },
-        "depression": {
+        "DEPRESSION": {
           "emotions": {
-            "sadness": {
+            "SADNESS": {
             },
-            "fatigue": {
+            "FATIGUE": {
             },
-            "apathy": {
+            "APATHY": {
             }
           }
         },
-        "disturbance": {
+        "DISTURBANCE": {
           "emotions": {
-            "agitation": {
+            "AGITATION": {
             },
-            "remorse": {
+            "REMORSE": {
             }
           }
         },
-        "dissatisfaction": {
+        "DISSATISFACTION": {
           "emotions": {
-            "humiliation": {
+            "HUMILIATION": {
             },
-            "frustration": {
+            "FRUSTRATION": {
             },
-            "dislike": {
+            "DISLIKE": {
             }
           }
         }
       }
     },
-    "safety": {
+    "SAFETY": {
       "emotions": {
-        "courage": {
+        "COURAGE": {
           "emotions": {
-            "audacity": {
+            "AUDACITY": {
             },
-            "extroversion": {
+            "EXTROVERSION": {
             }
           }
         },
-        "calm": {
+        "CALM": {
           "emotions": {
-            "tranquility": {
+            "TRANQUILITY": {
             },
-            "relaxation": {
+            "RELAXATION": {
             }
           }
         }
       }
     },
-    "anxiety": {
+    "ANXIETY": {
       "emotions": {
-        "fear": {
+        "FEAR": {
           "emotions": {
-            "dread": {
+            "DREAD": {
             },
-            "introversion": {
+            "INTROVERSION": {
             }
           }
         },
-        "tension": {
+        "TENSION": {
           "emotions": {
-            "anguish": {
+            "ANGUISH": {
             },
-            "concern": {
+            "CONCERN": {
             }
           }
         }
       }
     },
-    "surprise": {
+    "SURPRISE": {
     },
-    "indifference": {
+    "INDIFFERENCE": {
     },
-    "non_specific": {
+    "NON_SPECIFIC": {
     }
   }
 }

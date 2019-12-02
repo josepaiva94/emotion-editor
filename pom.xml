@@ -23,7 +23,7 @@
         <!-- dependencies -->
         <gwt.version>2.8.2</gwt.version>
 
-        <mediumeditorgwt.version>0.0.1</mediumeditorgwt.version>
+        <mediumeditorgwt.version>0.0.2</mediumeditorgwt.version>
         <mediumeditorgwt.repository.owner>josepaiva94</mediumeditorgwt.repository.owner>
         <mediumeditorgwt.repository.name>medium-editor-gwt</mediumeditorgwt.repository.name>
 

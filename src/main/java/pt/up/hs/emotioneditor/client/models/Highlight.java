@@ -1,24 +1,16 @@
-package pt.up.hs.emotioneditor.models;
+package pt.up.hs.emotioneditor.client.models;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * Emotion highlight JavaScript Definition
+ * Highlight JavaScript Definition
  *
  * @author José Carlos Paiva <code>josepaiva94@gmail.com</code>
  */
-public class EmotionHighlight extends JavaScriptObject {
+public class Highlight extends JavaScriptObject {
 
-    protected EmotionHighlight() {
+    protected Highlight() {
     }
-
-    public final native int getLine() /*-{
-        return this.line;
-    }-*/;
-
-    public final native void setLine(int line) /*-{
-        this.line = line;
-    }-*/;
 
     public final native int getStart() /*-{
         return this.start;
@@ -34,6 +26,14 @@ public class EmotionHighlight extends JavaScriptObject {
 
     public final native void setSize(int size) /*-{
         this.size = size;
+    }-*/;
+
+    public final native void setProps(JsMap props) /*-{
+        this.props = props;
+    }-*/;
+
+    public final native JsMap getProps() /*-{
+        return this.props || {};
     }-*/;
 
     public final native String getGlobalEmotion() /*-{

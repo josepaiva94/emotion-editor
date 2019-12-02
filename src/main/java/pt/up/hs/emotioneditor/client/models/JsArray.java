@@ -1,4 +1,4 @@
-package pt.up.hs.emotioneditor.models;
+package pt.up.hs.emotioneditor.client.models;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -18,7 +18,7 @@ public class JsArray<E extends JavaScriptObject> extends JavaScriptObject {
     }-*/;
 
     public final List<E> getAsList() {
-        List<E> list = new ArrayList<E>(length());
+        List<E> list = new ArrayList<>(length());
         for (int i = 0; i < length(); i++) {
             list.add(get(i));
         }

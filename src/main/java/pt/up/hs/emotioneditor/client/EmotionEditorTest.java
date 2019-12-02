@@ -1,9 +1,13 @@
-package pt.up.hs.emotioneditor;
+package pt.up.hs.emotioneditor.client;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.RootPanel;
-import pt.up.hs.emotioneditor.models.EmotionHighlight;
+
+import pt.up.hs.emotioneditor.client.models.Highlight;
+import pt.up.hs.emotioneditor.client.models.JsMap;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,38 +31,44 @@ public class EmotionEditorTest implements EntryPoint {
                         "led myself Pip, and came to be called Pip.\n\nI giv" +
                         "e Pirrip as my father’s family name, on the authori" +
                         "ty of his tombstone and my sister,—Mrs. Joe Gargery" +
-                        ", who married the blacksmith. As I never saw my fat" +
+                        ", who married the blacksmith.\nAs I never saw my fat" +
                         "her or my mother, and never saw any likeness of eit" +
                         "her of them (for their days were long before the da" +
                         "ys of photographs), my first fancies regarding what" +
                         " they were like were unreasonably derived from thei" +
                         "r tombstones...");
 
-        List<EmotionHighlight> highlights = new ArrayList<>();
+        List<Highlight> highlights = new ArrayList<>();
 
-        EmotionHighlight highlight1 = JavaScriptObject.createObject().cast();
-        highlight1.setLine(0);
+        Highlight highlight1 = JavaScriptObject.createObject().cast();
         highlight1.setStart(133);
         highlight1.setSize(8);
-        highlight1.setGlobalEmotion("BENEVOLENCE");
-        highlight1.setIntermediateEmotion("AFFECTION");
-        highlight1.setSpecificEmotion("DESIRE");
 
-        EmotionHighlight highlight2 = JavaScriptObject.createObject().cast();
-        highlight2.setLine(2);
-        highlight2.setStart(66);
+        JsMap props1 = JsMap.create();
+        props1.set("global", "BENEVOLENCE");
+        props1.set("intermediate", "AFFECTION");
+        props1.set("specific", "DESIRE");
+        highlight1.setProps(props1);
+
+        Highlight highlight2 = JavaScriptObject.createObject().cast();
+        highlight2.setStart(271);
         highlight2.setSize(9);
-        highlight2.setGlobalEmotion("SAFETY");
-        highlight2.setIntermediateEmotion("COURAGE");
-        highlight2.setSpecificEmotion("EXTROVERSION");
 
-        EmotionHighlight highlight3 = JavaScriptObject.createObject().cast();
-        highlight3.setLine(2);
-        highlight3.setStart(83);
+        JsMap props2 = JsMap.create();
+        props2.set("global", "SAFETY");
+        props2.set("intermediate", "COURAGE");
+        props2.set("specific", "EXTROVERSION");
+        highlight2.setProps(props2);
+
+        Highlight highlight3 = JavaScriptObject.createObject().cast();
+        highlight3.setStart(288);
         highlight3.setSize(6);
-        highlight3.setGlobalEmotion("DISCOMFORT");
-        highlight3.setIntermediateEmotion("MADNESS");
-        highlight3.setSpecificEmotion("MENTAL_DISEASE");
+
+        JsMap props3 = JsMap.create();
+        props3.set("global", "DISCOMFORT");
+        props3.set("intermediate", "MADNESS");
+        props3.set("specific", "MENTAL_DISEASE");
+        highlight3.setProps(props3);
 
         highlights.add(highlight1);
         highlights.add(highlight2);
@@ -67,5 +77,15 @@ public class EmotionEditorTest implements EntryPoint {
         emotionEditor.highlight(highlights);
 
         RootPanel.get(EDITOR_CONTAINER_ID).add(emotionEditor);
+
+        Button btn = new Button("Highlights");
+        btn.addClickHandler(h -> {
+            List<Highlight> highlightsFromEditor = emotionEditor.highlights();
+            for (Highlight hl: highlightsFromEditor) {
+                Window.alert(hl.getStart() + " " + hl.getSize());
+            }
+        });
+
+        RootPanel.get(EDITOR_CONTAINER_ID).add(btn);
     }
 }

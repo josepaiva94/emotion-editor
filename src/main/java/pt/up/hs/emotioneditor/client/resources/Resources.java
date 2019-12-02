@@ -1,4 +1,4 @@
-package pt.up.hs.emotioneditor.resources;
+package pt.up.hs.emotioneditor.client.resources;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ClientBundle;
