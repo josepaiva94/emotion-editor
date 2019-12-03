@@ -202,7 +202,7 @@ public class EmotionEditor extends Composite implements HasValueChangeHandlers<S
                 if (tagName === 'mark')  {
 
                     var data = {};
-                    [].forEach.call(el.attributes, function(attr) {
+                    [].forEach.call(tags[j].attributes, function(attr) {
                         if (/^data-/.test(attr.name)) {
                             var name = attr.name.substr(5).toLowerCase();
                             data[name] = attr.value;

@@ -35,28 +35,4 @@ public class Highlight extends JavaScriptObject {
     public final native JsMap getProps() /*-{
         return this.props || {};
     }-*/;
-
-    public final native String getGlobalEmotion() /*-{
-        return this.globalEmotion;
-    }-*/;
-
-    public final native void setGlobalEmotion(String globalEmotion) /*-{
-        this.globalEmotion = globalEmotion;
-    }-*/;
-
-    public final native String getIntermediateEmotion() /*-{
-        return this.intermediateEmotion;
-    }-*/;
-
-    public final native void setIntermediateEmotion(String intermediateEmotion) /*-{
-        this.intermediateEmotion = intermediateEmotion;
-    }-*/;
-
-    public final native String getSpecificEmotion() /*-{
-        return this.specificEmotion;
-    }-*/;
-
-    public final native void setSpecificEmotion(String specificEmotion) /*-{
-        this.specificEmotion = specificEmotion;
-    }-*/;
 }
