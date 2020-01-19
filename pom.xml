@@ -6,7 +6,7 @@
 
     <groupId>pt.up.hs</groupId>
     <artifactId>emotion-editor</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <packaging>gwt-lib</packaging>
     <name>Emotion Editor</name>
     <description>
